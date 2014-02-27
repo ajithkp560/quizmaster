@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="285.0" prefWidth="392.0" style="-fx-background-color: #ccffd4" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="quizconfiggenerator.generatorController">
+  <children>
+    <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="40.0" spacing="5.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0" text="Host* :">
+              <font>
+                <Font name="Agency FB Bold" size="20.0" fx:id="x1" />
+              </font>
+            </Label>
+            <TextField id="dqid" fx:id="hx" prefWidth="239.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="localhost" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="25.0" prefWidth="117.0" text="Port* :" />
+            <TextField id="dqid" fx:id="px" prefWidth="239.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="3306" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="25.0" prefWidth="117.0" text="Username* :" />
+            <TextField id="dqid" fx:id="ux" prefWidth="239.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="25.0" prefWidth="116.99990000000253" text="Password  :" />
+            <TextField id="dqid" fx:id="passx" prefWidth="239.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="25.0" prefWidth="117.0" text="Database* :" />
+            <TextField id="dqid" fx:id="dx" prefWidth="239.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+    <Button layoutX="136.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="Submit" />
+  </children>
+</AnchorPane>

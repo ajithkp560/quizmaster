@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="448.0" prefWidth="659.0" style="-fx-background-color: #ccffd4" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="designController">
+  <children>
+    <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="49.0" prefWidth="631.0" text="QUIZ PANEL" textFill="RED">
+      <font>
+        <Font name="Agency FB Bold" size="40.0" />
+      </font>
+    </Label>
+    <Separator layoutX="0.0" layoutY="74.0" prefWidth="659.0" />
+    <AnchorPane fx:id="loginPane" layoutX="14.0" layoutY="85.0" prefHeight="307.0" prefWidth="631.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
+          <children>
+            <VBox id="VBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="129.0" text="Host:" textFill="#292929">
+                  <font>
+                    <Font name="Agency FB Bold" size="25.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="35.0" prefWidth="129.0" text="Port:" />
+                <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="35.0" prefWidth="129.0" text="Username:" />
+                <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="35.0" prefWidth="129.0" text="Password:" />
+                <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="35.0" prefWidth="129.0" text="Database:" />
+              </children>
+            </VBox>
+            <VBox id="VBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <TextField fx:id="hostx" prefWidth="460.0" style="-fx-font-family: &quot;Agency FB&quot;;&#10;-fx-font-size: 25;&#10;-fx-background-color: #99ffda;" text="localhost" />
+                <TextField fx:id="portx" prefWidth="460.0" style="-fx-font-family: &quot;Agency FB&quot;;&#10;-fx-font-size: 25;&#10;-fx-background-color: #99ffda;" text="3306" />
+                <TextField fx:id="userx" prefWidth="460.0" style="-fx-font-family: &quot;Agency FB&quot;;&#10;-fx-font-size: 25;&#10;-fx-background-color: #99ffda;" />
+                <TextField fx:id="passx" prefWidth="460.0" style="-fx-font-family: &quot;Agency FB&quot;;&#10;-fx-font-size: 25;&#10;-fx-background-color: #99ffda;" />
+                <TextField fx:id="tabx" prefWidth="460.0" style="-fx-font-family: &quot;Agency FB&quot;;&#10;-fx-font-size: 25;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <Button fx:id="logx" font="$x1" layoutX="148.0" layoutY="224.0" mnemonicParsing="false" onAction="#loginClicked" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #99ffda;&#10;-fx-background-radius: 7, 6, 5, 4, 3, 5;" text="Login" />
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="addNewQuiz" layoutX="14.0" layoutY="85.0" prefHeight="349.0" prefWidth="631.0" style="-fx-background-color: #ccffd4;">
+      <children>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="26.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="129.0" text="Question *:">
+              <font>
+                <Font name="Agency FB Bold" size="20.0" fx:id="x2" />
+              </font>
+            </Label>
+            <TextField fx:id="questionx" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="61.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="35.0" prefWidth="129.0" text="Answer *:" />
+            <TextField fx:id="answerx" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="97.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="35.0" prefWidth="129.0" text="Option 1 *:" />
+            <TextField id="option_1" fx:id="option_1x" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="131.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="35.0" prefWidth="129.0" text="Option 2 *:" />
+            <TextField id="option_2" fx:id="option_2x" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="166.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="35.0" prefWidth="129.0" text="Option 3 *:" />
+            <TextField id="option_3" fx:id="option_3x" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="201.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="35.0" prefWidth="129.0" text="Option 4 *:" />
+            <TextField id="option_4" fx:id="option_4x" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="234.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="35.0" prefWidth="129.0" text="Image :" />
+            <TextField fx:id="imagex" onMouseClicked="#imagedlg" prefWidth="469.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+          </children>
+        </HBox>
+        <Button font="$x2" layoutX="133.0" layoutY="270.0" mnemonicParsing="false" onAction="#addQuizButton" prefHeight="35.000099999997474" prefWidth="129.0" style="-fx-background-color: #99ffda;" text="SUBMIT" />
+        <MenuButton layoutX="134.0" layoutY="0.0" mnemonicParsing="false" prefWidth="101.0" style="-fx-background-color: #99ffda;" text="Menu">
+          <font>
+            <Font name="Agency FB Bold" size="15.0" fx:id="x3" />
+          </font>
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#AddNewEntry" text="Add New Entry" />
+            <MenuItem mnemonicParsing="false" onAction="#EditEntry" text="Edit Entry" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteEntry" text="Delete Entry" />
+          </items>
+        </MenuButton>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="EditQuiz" layoutX="14.0" layoutY="84.0" prefHeight="349.0" prefWidth="631.0" style="-fx-background-color: #ccffd4;">
+      <children>
+        <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="34.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Question ID:" />
+            <TextField fx:id="qid" prefWidth="374.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+            <Button mnemonicParsing="false" onAction="#qidClicked" prefHeight="32.0" prefWidth="116.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="Submit" />
+          </children>
+        </HBox>
+        <Separator layoutX="-14.0" layoutY="71.0" prefWidth="659.0" />
+        <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="79.0" spacing="5.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Question * :" />
+                <TextField fx:id="qEd" editable="true" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Answer * :" />
+                <TextField id="aED" fx:id="aEd" editable="true" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Option 1* :" />
+                <TextField fx:id="o1Ed" editable="true" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Option 2* :" />
+                <TextField fx:id="o2Ed" editable="true" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Option 3* :" />
+                <TextField fx:id="o3Ed" editable="true" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Option 4* :" />
+                <TextField fx:id="o4Ed" editable="true" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="101.0" text="Image :" />
+                <TextField fx:id="iEd" editable="true" onMouseClicked="#imagedlg2" prefWidth="496.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+        <Button layoutX="120.0" layoutY="326.0" mnemonicParsing="false" onAction="#updateQ" prefWidth="116.00009999999747" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="Submit" />
+        <MenuButton font="$x3" layoutX="120.0" layoutY="-2.0" mnemonicParsing="false" prefWidth="101.0" style="-fx-background-color: #99ffda;" text="Menu">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#AddNewEntry" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 15;" text="Add New Entry" />
+            <MenuItem mnemonicParsing="false" onAction="#EditEntry" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 15;" text="Edit Entry" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteEntry" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 15;" text="Delete Entry" />
+          </items>
+        </MenuButton>
+        <Separator layoutX="-14.0" layoutY="28.0" prefWidth="659.0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="deleteQuiz" layoutX="0.0" layoutY="77.0" prefHeight="371.0" prefWidth="659.0" style="-fx-background-color: #ccffd4;">
+      <children>
+        <MenuButton font="$x3" layoutX="134.0" layoutY="4.0" mnemonicParsing="false" prefWidth="101.0" style="-fx-background-color: #99ffda;" text="Menu">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#AddNewEntry" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 15;" text="Add New Entry" />
+            <MenuItem mnemonicParsing="false" onAction="#EditEntry" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 15;" text="Edit Entry" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteEntry" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 15;" text="Delete Entry" />
+          </items>
+        </MenuButton>
+        <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="60.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" font="$x2" prefHeight="25.0" prefWidth="117.0" text="Delete Question:" />
+            <TextField fx:id="dqid" prefWidth="422.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" />
+            <Button mnemonicParsing="false" onAction="#deleteAQuiz" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="Submit" />
+          </children>
+        </HBox>
+        <Separator layoutX="0.0" layoutY="47.0" prefWidth="659.0" />
+        <Separator layoutX="0.0" layoutY="169.0" prefWidth="659.0" />
+        <Button layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#deleteFullQuiz" prefHeight="40.0" prefWidth="631.0" style="-fx-font-family: &quot;Agency FB Bold&quot;;&#10;-fx-font-size: 20;&#10;-fx-background-color: #99ffda;" text="Delete Full Data" />
+        <Separator layoutX="0.0" layoutY="104.0" prefWidth="659.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
