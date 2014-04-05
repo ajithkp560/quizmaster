@@ -4,7 +4,6 @@ package quizprogram;
  * Coded By AJITH KP [ ajithkp560@gmail.com ]
  * AMSTECK ARTS & SCIENCE COLLEGE, KALLIASSERY
  * BCA 2012 - 2015 Batch
- * AJITH KP [ http://www.terminalcoders.blogspot.in ] [ http://vxcrack.blogspot.in ]
  */
 
 
@@ -368,7 +367,7 @@ public class SampleController implements Initializable, Runnable
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             cc = DriverManager.getConnection("jdbc:mysql://"+host+":"+port+"/"+database, username, password);
             ss = cc.createStatement();
-            rr = ss.executeQuery("select * from QUIZTEST.QUIZDATA");
+            rr = ss.executeQuery("select * from "+database+".QUIZDATA");
             int size = countRow(rr);
             answers = new String[size];
             questions = new String[size];
@@ -384,9 +383,9 @@ public class SampleController implements Initializable, Runnable
         try
         {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiztest", "root", "");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database, "root", "");
             s = c.createStatement();
-            r = s.executeQuery("select * from QUIZTEST.QUIZDATA");
+            r = s.executeQuery("select * from "+database+".QUIZDATA");
             setResult(r);
         }
         catch(Exception ex)
